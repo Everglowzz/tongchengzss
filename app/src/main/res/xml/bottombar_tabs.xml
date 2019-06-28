@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+
+
+    <tab
+        id="@+id/tab_home"
+        icon="@drawable/ic_guanli"
+        title="@string/title_home" />
+    <tab
+        id="@+id/tab_shop"
+        icon="@drawable/ic_jiesuo"
+        title="@string/title_unlock" />
+    <tab
+        id="@+id/tab_discover"
+        icon="@drawable/ic_repair"
+        title="@string/title_repair" />
+    <tab
+        id="@+id/tab_mine"
+        icon="@drawable/ic_mini"
+        title="@string/title_mine" />
+
+</tabs>

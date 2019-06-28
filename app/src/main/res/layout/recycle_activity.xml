@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+              android:orientation="vertical"
+                xmlns:GroupViewItem="http://schemas.android.com/apk/res-auto"
+                android:background="@color/main_bg"
+                android:fitsSystemWindows="false">
+
+
+    <include
+        android:id="@+id/ll_top"
+        layout="@layout/toolbar"
+        />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding"
+        android:background="@color/colorPrimary"
+        android:paddingRight="@dimen/padding"
+        android:id="@+id/head_item"
+        >
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="序号"
+            android:lines="1"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="@dimen/notes_text_content_title_size"/>
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:layout_height="match_parent"
+            android:text="票据编号"
+            android:textColor="@color/white"
+            android:lines="1"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="@dimen/notes_text_content_title_size"/>
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="缴费时间"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:lines="1"
+            android:gravity="center"
+            android:textSize="@dimen/notes_text_content_title_size"/>
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="match_parent"
+            android:text="缴费金额"
+            android:textColor="@color/white"
+            android:lines="1"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="@dimen/notes_text_content_title_size"/>
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="match_parent"
+            android:text="操作"
+            android:lines="1"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="@dimen/notes_text_content_title_size"/>
+
+
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/dragRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginRight="@dimen/margin"
+        />
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="暂无记录"
+        android:visibility="gone"
+        android:drawablePadding="5dp"
+        android:drawableTop="@drawable/ic_empty"
+        android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</LinearLayout>

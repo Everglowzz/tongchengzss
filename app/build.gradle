@@ -1,0 +1,133 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    useLibrary 'org.apache.http.legacy'
+
+    signingConfigs {
+        release {
+            keyAlias 'android'
+            keyPassword 'fht123'
+            storeFile file('pos.jks')
+            storePassword 'fht123'
+        }
+    }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId 'hzyj.come.zhangshangpingtai'
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        multiDexEnabled true
+
+        ndk {
+            //选择要添加的对应 cpu 类型的 .so 库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: "hzyj.come.zhangshangpingtai",
+                JPUSH_APPKEY : "12bbf1a4010336dd45282e93", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "boolean", "USE_CANARY", "true"
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "boolean", "USE_CANARY", "false"
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        quiet true
+        ignoreWarnings true
+        abortOnError false
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+
+                // like: com.android.cmm.cqq-v1.0-1-release.apk
+                outputFileName = "掌上搜" + "-v" + defaultConfig.versionName + ".apk"
+
+
+            }
+        }
+    }
+
+}
+
+
+dependencies {
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'me.jessyan:arms:2.4.1'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile rootProject.ext.dependencies["junit"]
+    compile rootProject.ext.dependencies["support-v4"]
+    compile rootProject.ext.dependencies["gson"]
+    compile rootProject.ext.dependencies["appcompat-v7"]
+    compile rootProject.ext.dependencies["cardview-v7"]
+    compile rootProject.ext.dependencies["autolayout"]
+    compile rootProject.ext.dependencies["butterknife"]
+    compile rootProject.ext.dependencies["androideventbus"]
+    compile rootProject.ext.dependencies["rxlifecycle2-components"]
+    compile rootProject.ext.dependencies["banner"]
+    implementation 'com.j256.ormlite:ormlite-android:4.48'
+    implementation 'com.squareup.retrofit2:retrofit:2.0.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.0.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.0.0'
+    implementation 'com.roughike:bottom-bar:2.3.1'
+    implementation 'com.sunfusheng:marqueeview:1.3.3'
+    //底部导航
+//    compile 'liji.library.dev:citypickerview:3.1.8'
+    implementation 'liji.library.dev:citypickerview:4.2.1'
+    implementation 'com.yuyh.imgsel:library:2.0.2'
+    implementation 'com.android.support:multidex:1.0.1'
+    implementation 'com.github.fodroid:XRadioGroup:v1.5'
+//    implementation 'com.gesturelock:GestureLock:1.0'
+    annotationProcessor rootProject.ext.dependencies[
+            "butterknife-compiler"]
+    //Butterknife 插件,很多人因为没加这个而报错,切记!!!
+    annotationProcessor rootProject.ext.dependencies[
+            "dagger2-compiler"]
+    //依赖插件, annotationProcessor 是 AndroidStudio 自带并用来替换 APT
+    implementation rootProject.ext.dependencies["progressmanager"]
+    implementation rootProject.ext.dependencies["retrofit-url-manager"]
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    compile project(':common')
+    implementation project(':zxinglibrary')
+    implementation files('libs/ocr-sdk.jar')
+    implementation project(':wannianli')
+    implementation project(':shengxiao')
+    implementation 'com.youth.banner:banner:1.4.10'
+    implementation project(':permission')
+  
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+    //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+//    compile 'com.tencent.bugly:nativecrashreport:latest.release'
+    //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
+    implementation 'cn.jiguang.sdk:jpush:3.1.6'
+    // 此处以JPush 3.1.6 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:1.2.5'
+    // 此处以JCore 1.2.5 版本为例。
+    implementation files('libs/BaiduLBS_Android.jar')
+}

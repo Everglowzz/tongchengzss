@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:layout_marginTop="@dimen/margin"
+    android:background="@drawable/shape_green"
+    android:orientation="vertical"
+    android:layout_marginLeft="7dp"
+    android:layout_marginRight="7dp"
+    android:id="@+id/rl_order_history_item"
+    >
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/iv_image"
+        android:src="@drawable/moren"
+        android:scaleType="centerInside"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"/>
+    
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:text="停车费"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:lines="1"
+        android:gravity="center"
+        android:textSize="@dimen/sp_14"/>
+    
+   
+
+
+</LinearLayout>

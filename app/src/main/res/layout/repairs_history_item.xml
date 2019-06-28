@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="120dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/shape_white_8r"
+    android:orientation="vertical"
+    android:layout_marginLeft="@dimen/padding"
+    android:layout_marginRight="@dimen/padding"
+    android:paddingLeft="@dimen/margin"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:paddingRight="@dimen/margin"
+    android:id="@+id/rl_order_history_item"
+    >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_height="0dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:text="申请时间："
+            android:lines="1"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/notes_text_content_title_size"/>
+       
+        <TextView
+            android:id="@+id/tv_apply_time"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            tools:text="2019-11-22"
+            android:lines="1"
+            android:textColor="@color/black_aa"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/notes_text_content_title_size"/>
+       
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="处理状态："
+            android:lines="1"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/notes_text_content_title_size"/>
+       
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            tools:text="已处理"
+            android:lines="1"
+            android:textColor="@color/black_aa"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/notes_text_content_title_size"/>
+      
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_height="0dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:text="受理时间："
+            android:lines="1"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/notes_text_content_title_size"/>
+       
+        <TextView
+            android:id="@+id/tv_accept_time"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            tools:text="2019-11-22"
+            android:lines="1"
+            android:textColor="@color/black_aa"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/notes_text_content_title_size"/>
+       
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="报修类型："
+            android:lines="1"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/notes_text_content_title_size"/>
+       
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            tools:text="公共"
+            android:lines="1"
+            android:textColor="@color/black_aa"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/notes_text_content_title_size"/>
+      
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_height="0dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:text="材料费用："
+            android:lines="1"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/notes_text_content_title_size"/>
+       
+        <TextView
+            android:id="@+id/tv_materials_price"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            tools:text="2344.11"
+            android:lines="1"
+            android:textColor="@color/black_aa"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/notes_text_content_title_size"/>
+       
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="人工费用："
+            android:lines="1"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/notes_text_content_title_size"/>
+       
+        <TextView
+            android:id="@+id/tv_labour"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            tools:text="1822"
+            android:lines="1"
+            android:textColor="@color/black_aa"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/notes_text_content_title_size"/>
+      
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:text="报修原因："
+            android:lines="1"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/notes_text_content_title_size"/>
+       
+        <TextView
+            android:id="@+id/tv_cause"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.4"
+            tools:text="康师傅打扫sdfdasfcvasdfas"
+            android:maxLines="3"
+            android:textColor="@color/black_aa"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/notes_text_content_title_size"/>
+       
+
+      
+    </LinearLayout>
+ 
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_order"
+        android:icon="@drawable/ic_dingdan"
+        android:title="订单查询"/>
+    <item
+        android:id="@+id/item_xiaoxi"
+        android:icon="@drawable/ic_message"
+        android:title="消息通知"/>
+    <item
+        android:id="@+id/item_check_update"
+        android:icon="@drawable/ic_change_light"
+        android:title="检测新版本"/>
+    <item
+        android:id="@+id/item_suggest"
+        android:icon="@drawable/ic_post"
+        android:title="投诉建议"/>
+    <item
+        android:id="@+id/item_us"
+        android:icon="@drawable/ic_service_light"
+        android:title="关于我们"/>
+    <item
+        android:id="@+id/item_login_out"
+        android:icon="@drawable/ic_loginout"
+        android:title="退出账号"/>
+
+   
+
+</menu>

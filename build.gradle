@@ -1,0 +1,73 @@
+apply from: "config.gradle" //这里表示引用config.gradle文件
+buildscript {
+
+
+    ext {
+        /*sdk and version*/
+        compile_sdk_version = 26
+        build_tools_version = '26.0.2'
+        min_sdk_version = 19
+        target_sdk_version = 27
+        constraint_version = '1.1.0'
+        version_code = 1
+        version_name = '1.0.0'
+
+        /*support*/
+        android_support = '26.1.0'
+
+
+
+    }
+    
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        //classpath 'com.android.tools.build:gradle:2.3.3'//Android Studio v2.3.3
+        classpath 'com.android.tools.build:gradle:3.1.1' //Android Studio v3.0
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
+    }
+}
+
+allprojects {
+    group "yuZhiQiang"
+    repositories {
+        google() //AndroidStudio v3.0 可以使用 google() 替代 maven { url "https://maven.google.com" }
+        jcenter()
+        maven { url "https://jitpack.io" }//RxCache 需要 jitpack 仓库
+//        maven { url "https://maven.google.com" }//Support-library 需要 Google 仓库
+    
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+ext {
+    // Sdk and tools
+    minSdkVersion = 19
+    targetSdkVersion = 27
+    compileSdkVersion = 26
+    buildToolsVersion = '26.0.2'
+
+    // App dependencies
+    supportLibraryVersion = '26.1.0'
+    constraintVersion = '1.1.0'
+    junitVersion = '4.12'
+    retrofitVersion = '2.2.0'
+    okhttpVersion = '3.6.0'
+    rxjavaVersion = '2.0.6'
+    rxandroidVersion = '2.0.1'
+    rxCacheVersion = '1.8.0-2.x'
+    rxCacheGsonVersion = '0.0.3'
+    espressoVersion = '2.2.2'
+    gsonVersion = '2.8.0'
+    daggerVersion = '2.9'
+    butterKnifeVersion = '8.5.1'
+    frescoVersion = '1.2.0'
+    arouterVersion = '1.2.0'
+    arouterCompilerVersion = '1.1.1'
+    easypermissionVersion = '0.3.1'
+    autoScrollViewPagerVersion = '2.1.7'
+}

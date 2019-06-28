@@ -1,0 +1,1 @@
+include ':app', ':common', ':zxinglibrary', ':ocr_ui',':permission', ':wannianli' ,':shengxiao'

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/shape_white_8r"
+    android:orientation="horizontal"
+    android:id="@+id/rl_order_history_item"
+    >
+    
+    <TextView
+        android:id="@+id/tv_id"
+        android:layout_marginLeft="10dp"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        tools:text="1232"
+        android:lines="1"
+        android:gravity="center"
+        android:textSize="@dimen/notes_text_content_title_size"/>
+    <TextView
+        android:id="@+id/tv_code"
+        android:layout_marginLeft="10dp"
+        android:layout_width="0dp"
+        android:layout_weight="1.2"
+        android:layout_height="match_parent"
+        tools:text="10290122113"
+        android:lines="1"
+        android:gravity="center"
+        android:textSize="@dimen/notes_text_content_title_size"/>
+    <TextView
+        android:id="@+id/tv_updatetime"
+        android:layout_marginLeft="10dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        tools:text="2019-01-05"
+        android:lines="1"
+        android:gravity="center"
+        android:textSize="@dimen/notes_text_content_title_size"/>
+    <TextView
+        android:id="@+id/tv_chargePaid"
+        android:layout_marginLeft="10dp"
+        android:layout_width="0dp"
+        android:layout_weight="0.8"
+        android:layout_height="match_parent"
+        tools:text="201.99"
+        android:lines="1"
+        android:gravity="center"
+        android:textSize="@dimen/notes_text_content_title_size"/>
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_width="0dp"
+        android:layout_weight="0.8"
+        android:layout_height="match_parent"
+        android:text="查看详情"
+        android:lines="1"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/notes_text_content_title_size"/>
+ 
+   
+
+
+</LinearLayout>
